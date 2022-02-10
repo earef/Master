@@ -24,18 +24,23 @@ ovs-vsctl add-port OVS1 veth-g;
 #ip link;
 ip link set veth-r up;
 #ip link;
-ip netns exec red ip link set dev lo up;
-ip netns exec red ip link set dev eth0-r up;
-ip netns exec red ip address add 10.0.0.3/24 dev eth0-r;
-ip netns exec red ip a;
-ip netns exec red ip route;
-ip route;
-ip link set dev veth-g up;
-ip netns exec green bash;
-ip link set dev lo up;
-ip link set dev eth0-g up;
-ip address add 10.0.0.4/24 dev eth0-g;
-ip a;
-ip netns exec red bash;
+ip netns exec red ip link set dev lo up
+ip netns exec red ip link set dev eth0-r up
+ip netns exec red ip address add 10.0.0.3/24 dev eth0-r
+ip netns exec red ip a
+ip netns exec red ip route
+ip route
+ip link set dev veth-g up
+ip netns exec green bash
+ip link set dev lo up
+ip link set dev eth0-g up
+ip address add 10.0.0.4/24 dev eth0-g
+ip a
+ip netns exec red bash
 #ping
 Exit
+
+
+
+#some help commands
+#ovs-vsctl del-br OVS1     ,to remove the whole bridge
