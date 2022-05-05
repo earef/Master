@@ -1,2 +1,2 @@
-Master thesis temporary files.
-Script for namespace is creating namespace intra linux mint machine.
+The script is creating name spaces for eth0 and wlan0
+eahc physical interfaces must be in isolated space.
